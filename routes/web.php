@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RecordsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('vehicle-license-plates',[RecordsController::class,'get_vehicle_plates'])->name('vechicle.plates');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
