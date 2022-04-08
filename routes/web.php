@@ -25,8 +25,14 @@ Auth::routes();
 
 Route::get('/vehicle-registration-types',[VehiclesController::class,'get_vehicle_registration'])->name('vechicle.registration_types');
 Route::get('/vehicle-licence-plate-unique',[VehiclesController::class,'get_vehicle_plates'])->name('vechicle.registration_plates');
+
+Route::get('/vehicle/ofical',[VehiclesController::class,'index_oficial'])->name('vechicle.oficial');
+Route::get('/vehicle/residente',[VehiclesController::class,'index_residente'])->name('vechicle.residente');
 Route::post('/vehicle/save-of',[VehiclesController::class,'store_vehicle_of'])->name('vechicle.storeof');
 Route::post('/vehicle/save-res',[VehiclesController::class,'store_vehicle_res'])->name('vechicle.storeres');
+
+Route::get('/vehicle/show/{id}',[VehiclesController::class,'show'])->name('vehicle.show');
+
 
 Route::post('/record/check-in',[RecordsController::class,'store_check_in'])->name('records.checkin');
 Route::post('/record/check-out',[RecordsController::class,'store_check_out'])->name('records.checkout');

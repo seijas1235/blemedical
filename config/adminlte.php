@@ -270,13 +270,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Vehiculo Oficial',
-                    'url'  => '#vof',
-                    'id' => 'vof'
+                    'route'  => 'vechicle.oficial',
+
                 ],
                 [
                     'text' => 'Vehiculo Residente',
-                    'url'  => '#vres',
-                    'id'  => 'vres',
+                    'route'  => 'vechicle.residente',
+
                 ],
             ],
         ],
