@@ -16,8 +16,8 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('vehicle_type_id')->references('id')->on('vehicle_types')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('vehicle_registration_type')->references('id')->on('vehicle_registration_types')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('vehicle_license_plates')->unique();
+            $table->foreignId('vehicle_registration_type_id')->references('id')->on('vehicle_registration_types')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('vehicle_license_plates');
             $table->timestamps();
         });
     }

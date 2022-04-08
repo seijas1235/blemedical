@@ -15,7 +15,7 @@ class CreateCheckInsTable extends Migration
     {
         Schema::create('check_ins', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('record')->references('id')->on('records')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('record_id')->references('id')->on('records')->onDelete('cascade')->onUpdate('cascade');
             $table->dateTime('ckeck_in');
         });
     }

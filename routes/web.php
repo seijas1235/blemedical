@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RecordsController;
+use App\Http\Controllers\VehiclesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
+
 
 Auth::routes();
 
-Route::get('vehicle-license-plates',[RecordsController::class,'get_vehicle_plates'])->name('vechicle.plates');
+Route::get('/vehicle-registration-types',[VehiclesController::class,'get_vehicle_registration'])->name('vechicle.registration_types');
+Route::get('/vehicle-licence-plate-unique',[VehiclesController::class,'get_vehicle_plates'])->name('vechicle.registration_plates');
+Route::post('/vehicle/save-of',[VehiclesController::class,'store_vehicle_of'])->name('vechicle.storeof');
+Route::post('/vehicle/save-res',[VehiclesController::class,'store_vehicle_res'])->name('vechicle.storeres');
+
+Route::post('/record/check-in',[RecordsController::class,'store_check_in'])->name('records.checkin');
+Route::post('/record/check-out',[RecordsController::class,'store_check_out'])->name('records.checkout');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

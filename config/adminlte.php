@@ -258,7 +258,8 @@ return [
                 ],
                 [
                     'text' => 'Salida',
-                    'url'  => '#',
+                    'url'  => '#checkout',
+                    'id'  => 'checkout',
                 ],
             ],
         ],
@@ -269,12 +270,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Vehiculo Oficial',
-                    'url'  => '#',
-                    'id' =>'v1'
+                    'url'  => '#vof',
+                    'id' => 'vof'
                 ],
                 [
-                    'text' => 'Vehiculo Eesidente',
-                    'url'  => '#',
+                    'text' => 'Vehiculo Residente',
+                    'url'  => '#vres',
+                    'id'  => 'vres',
                 ],
             ],
         ],

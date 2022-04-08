@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TollFee extends Model
 {
     use HasFactory;
+    protected $table = 'toll_fees';
+    protected $fillable = [
+        'toll_fee',
+
+    ];
 }

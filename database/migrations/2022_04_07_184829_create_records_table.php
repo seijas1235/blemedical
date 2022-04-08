@@ -15,6 +15,7 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('vehicle_registration_type_id')->references('id')->on('vehicle_registration_types')->onDelete('cascade')->onUpdate('cascade');
             $table->string('vehicle_license_plates');
             $table->decimal('parking_time')->default(0);
             $table->timestamps();

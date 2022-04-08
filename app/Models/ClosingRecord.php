@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ClosingRecord extends Model
 {
     use HasFactory;
+    protected $table = 'closing_records';
+    protected $fillable = [
+        'closing_records',
+    ];
 }
