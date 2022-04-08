@@ -12,4 +12,5 @@ class ClosingRecord extends Model
     protected $fillable = [
         'closing_records',
     ];
+    public $timestamps = false;
 }

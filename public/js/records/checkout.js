@@ -88,7 +88,7 @@ $('#modalCheckout').on('shown.bs.modal', function(event){
     $("#vehicle_registration_type_id_out").append('<option value="" selected>Seleccione Tipo de placa</option>');
     $.ajax({
       type: "GET",
-      url: "vehicle-registration-types",
+      url: "/vehicle-registration-types",
       dataType: "json",
       success: function(data){
         $.each(data,function(key, registro) {

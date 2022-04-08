@@ -57,9 +57,9 @@
     </div>
 </div>
 
-
-
-@stop
+<main class="py-4">
+    @yield('reporte')
+</main>
 @section('css')
     <script src="{{asset('css/custom.css') }}"></script>
 
@@ -71,4 +71,5 @@
 <script src="{{asset('js/records/checkout.js')}}"></script>
 <script src="{{asset('js/vehicle/createres.js')}}"></script>
 <script src="{{asset('js/vehicle/createof.js')}}"></script>
+<script src="{{asset('js/report/report.js')}}"></script>
 @stop

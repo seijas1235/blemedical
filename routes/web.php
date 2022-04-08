@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RecordsController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\VehiclesController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,9 @@ Route::post('/vehicle/save-res',[VehiclesController::class,'store_vehicle_res'])
 Route::post('/record/check-in',[RecordsController::class,'store_check_in'])->name('records.checkin');
 Route::post('/record/check-out',[RecordsController::class,'store_check_out'])->name('records.checkout');
 
+Route::get('/report/report-pay',[ReportController::class,'index'])->name('report.index');
+Route::get('/report/report-pay-download',[ReportController::class,'report_pay_pdf'])->name('report.download');
+
+Route::post('/record/close-record',[ReportController::class,'close_report'])->name('records.close');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

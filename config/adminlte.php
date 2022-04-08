@@ -284,11 +284,12 @@ return [
         [
             'text'       => 'Pago de Residente',
             'icon_color' => 'red',
-            'url'        => '#',
+            'route'  => 'report.index',
         ],
         [
             'text'       => 'Comensar Mes',
             'icon_color' => 'yellow',
+            'id'  => 'close',
             'url'        => '#',
         ],
     ],
